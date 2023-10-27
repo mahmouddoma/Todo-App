@@ -1,0 +1,12 @@
+
+<h2 class="todo-header">Todo List</h2>
+<input class="note-input " #newNote>
+<button class="add-button" (click)="addNotes(newNote.value)">Add Notes</button>
+
+<div class="note-list">
+  <h3 *ngFor="let note of notes" class="note-item">
+    <b>{{note.description}}</b>
+    <button class="delete-button" (click)="deleteNotes(note.id)">Delete Note</button>
+  </h3>
+</div>
+
